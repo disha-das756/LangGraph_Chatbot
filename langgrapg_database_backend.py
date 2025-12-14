@@ -10,7 +10,7 @@ import sqlite3
 
 
 import os
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBduupIajbMOAu43Vt0ic0cZ1R_zsw2ui0"
+os.environ["GOOGLE_API_KEY"] = "Your API keys goes here"
 
 # Initialize the model
 model = ChatGoogleGenerativeAI(
@@ -61,4 +61,5 @@ def retrieve_all_threads():
     for checkpoint in checkpointer.list(None):
         all_threads.add(checkpoint.config['configurable']['thread_id'])
         
+
     return list(all_threads)
